@@ -13,6 +13,9 @@ const Functionality = () => {
 
     const uploadImage = () => {
 
+        const fileInput = document.getElementById('fileInput');
+
+
         var data = new FormData();
         data.append("image_file", fileInput.files[0], "@path/to/image");
         // data.append("image_url", "url_to_image");
@@ -53,10 +56,10 @@ const Functionality = () => {
             <div className='flex justify-center items-center'>
 
                 <input type='file' name='fileInput' id='fileInput' className='mt-8' accept='image/*'
-                    onClick={(e) => { setImage = (e.target.files[0]) }} />
+                    onChange={(e) => setImage(e.target.files[0])}  />
 
                 <button type='submit' className='mt-8 bg-sky-600 rounded-lg w-24 h-8 font-semibold text-md'
-                    onClick="uploadImage"
+                    onClick={uploadImage}
                 >Done</button>
 
                 {bgremove && <img src={bgremove} alt="removed background" />}
