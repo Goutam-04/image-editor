@@ -30,7 +30,7 @@ const Functionality = () => {
         });
 
         xhr.open("POST", "https://api.removal.ai/3.0/remove");
-        xhr.setRequestHeader("Rm-Token", "yourToken");
+        xhr.setRequestHeader("Rm-Token", yourToken);
 
         xhr.send(data);
 
