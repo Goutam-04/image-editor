@@ -33,7 +33,7 @@ const Navbaar = () => {
             Home
           </p>
         </Navbar.Link>
-        <Navbar.Link href="#">
+        <Navbar.Link href="">
           About
         </Navbar.Link>
         <Navbar.Link href="#">
