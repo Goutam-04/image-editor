@@ -1,7 +1,8 @@
+import { FileInput } from 'flowbite-react';
 import React from 'react'
 import { useState } from 'react'
 
-// API TOKEN: 64c45d2af1b414.18748169
+
 
 const Functionality = () => {
     
@@ -34,10 +35,6 @@ const Functionality = () => {
         
     }
         
-    
-    
-    
-
 
 
 
@@ -58,9 +55,20 @@ return (
         </div>
         <div>
 
-       { bgremove &&<img src={bgremove} alt="removed background" />}
+        {/* && means when the bgremove function or state is active then only the button or the element shows it is the simple use react state */}
+
+       { bgremove &&<div className='flex justify-center py-4'>
+
+       <img src={bgremove} alt="removed background" className='border-solid border-sky-200 border-2 rounded-xl max-w-2xl w-full' />
+       </div>}
          
-            
+        {
+        bgremove&& <a href={bgremove} download={FileInput} className='flex justify-center items-center mt-3'>
+                <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex justify-center items-center'>
+                            Download Image
+                </button>
+            </a>
+        }   
             
         </div>
     </div>
@@ -68,40 +76,3 @@ return (
 }
 
 export default Functionality;
-// const yourToken = '64c45d2af1b414.18748169';
-
-// const [image, setImage] = useState(null);
-// const [bgremove, setBgRemove] = useState(null);
-
-// const uploadImage = () => {
-    
-    //     const fileInput = document.getElementById('fileInput');
-    
-    
-    //     var data = new FormData();
-    //     data.append("image_file", fileInput.files[0], "@path/to/image");
-    //     // data.append("image_url", "url_to_image");
-    //     var xhr = new XMLHttpRequest();
-    //     xhr.withCredentials = true;
-
-//     xhr.addEventListener("readystatechange", function () {
-//         if (this.readyState === 4) {
-//             console.log(this.responseText);
-//         }
-//     });
-
-//     xhr.open("POST", "https://api.removal.ai/3.0/remove");
-//     xhr.setRequestHeader("Rm-Token", yourToken);
-
-//     xhr.send(data);
-
-// const reader = new FileReader();
-
-// reader.onload = (event) => {
-//   // The code inside this block will be executed when the file has been successfully loaded.
-//   setBgRemove = event.target.result;
-//   // Do something with the fileContent, e.g., display it or process it further.
-// };
-
-// // Assuming 'file' is the file object obtained from an input file form element.
-// reader.readAsDataURL(data);
