@@ -2,6 +2,7 @@
   "name": "image_editor",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Goutam-04.github.io/image-editor",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -9,6 +10,7 @@
     "autoprefixer": "^10.4.14",
     "flowbite": "^1.7.0",
     "flowbite-react": "^0.4.11",
+    "gh-pages": "^5.0.0",
     "postcss": "^8.4.26",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -17,6 +19,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+      "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -40,4 +44,5 @@
       "last 1 safari version"
     ]
   }
+
 }
